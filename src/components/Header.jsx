@@ -39,14 +39,14 @@ const Header = () => {
                             isMenuOpen && (
 
                                 <div className=' text-white absolute bg-zinc-800 left-0 w-full top-0 z-10'>
-                                    <Link to="/"><img src="ruqyahbd-logo.png" alt="logo" className='w-32 h-10' /></Link>
+                                    <Link to="/"><img src="ruqyahbd-logo.png" alt="logo" className='w-32 h-10' onClick={()=>setisMenuOpen(false)} /></Link>
                                     <button 
                                     aria-label='Close Menu'
                                     title='Close Menu'
                                     onClick={()=>setisMenuOpen(false)}>
                                         <XMarkIcon className='w-8 h-8'></XMarkIcon>
                                     </button>
-                                    <ul className=' space-y-4 items-center'>
+                                    <ul className=' space-y-4 items-center' onClick={()=>setisMenuOpen(false)}>
                                         <li>
                                             <NavLink to="/" className={({ isActive }) => isActive ? "active " : "default"}>Home</NavLink>
                                         </li>
@@ -54,7 +54,7 @@ const Header = () => {
                                             <NavLink to="./books" className={({ isActive }) => isActive ? "active " : "default"}>Books</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="./audio" className={({ isActive }) => isActive ? "active " : "default"}>Audio</NavLink>
+                                            <NavLink to="./audio" className={({ isActive }) => isActive ? "active " : "default"} >Audio</NavLink>
                                         </li>
                                         <li>
                                             <NavLink to="./blog" className={({ isActive }) => isActive ? "active " : "default"}>Blog</NavLink>
@@ -63,7 +63,7 @@ const Header = () => {
                                             <NavLink to="./about" className={({ isActive }) => isActive ? "active " : "default"}>About</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="./contact" className={({ isActive }) => isActive ? "active " : "default"}>Contat Us</NavLink>
+                                            <NavLink to="./contact" className={({ isActive }) => isActive ? "active " : "default"} >Contat Us</NavLink>
                                         </li>
                                     </ul>
                                 </div>
