@@ -13,7 +13,8 @@ import Books from './components/Books';
 import Blog from './components/Blog';
 import Audio from './components/Audio';
 import About from './components/About';
-import Contact from './components/Contact';
+import { ContactUs } from './components/ContactUs';
+
 
 
 const router = createBrowserRouter([
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
       },
       {
         path:"books",
-        element: <Books></Books>
+        element: <Books></Books>,
+        loader: ()=> fetch("https://api.itbook.store/1.0/new")
       },
       {
         path:"blog",
@@ -44,7 +46,7 @@ const router = createBrowserRouter([
       },
       {
         path:"contact",
-        element: <Contact></Contact>
+        element: <ContactUs></ContactUs>
       },
     ]
   },
